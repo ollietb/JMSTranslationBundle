@@ -61,6 +61,14 @@ class XliffLoaderTest extends \PHPUnit_Framework_TestCase
         );
     }
 
+    public function testDomainExistsWithNoTranslations()
+    {
+        $loader = new XliffLoader();
+        $catalogue = $loader->load(__DIR__.'/../Dumper/xliff/empty.xml', 'en', 'messages');
+
+        $this->assertTrue($catalogue->hasDomain('messages'));
+    }
+
     public function getTestFiles()
     {
         $files = array();

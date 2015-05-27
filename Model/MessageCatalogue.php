@@ -54,6 +54,14 @@ class MessageCatalogue
     }
 
     /**
+     * @param string $domain
+     */
+    public function addDomain($domain)
+    {
+        $this->getOrCreateDomain($domain);
+    }
+
+    /**
      * @param Message $message
      */
     public function add(Message $message)
