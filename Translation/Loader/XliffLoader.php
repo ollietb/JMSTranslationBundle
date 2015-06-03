@@ -43,6 +43,7 @@ class XliffLoader implements LoaderInterface
 
         $catalogue = new MessageCatalogue();
         $catalogue->setLocale($locale);
+        $catalogue->addDomain($domain);
 
         foreach ($doc->xpath('//xliff:trans-unit') as $trans) {
             $id = ($resName = (string) $trans->attributes()->resname)
