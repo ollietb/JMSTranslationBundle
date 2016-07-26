@@ -234,9 +234,9 @@ class FormExtractorTest extends \PHPUnit_Framework_TestCase
     {
         $docParser = new DocParser();
         $docParser->setImports(array(
-            'desc' => 'JMS\TranslationBundle\Annotation\Desc',
-            'meaning' => 'JMS\TranslationBundle\Annotation\Meaning',
-            'ignore' => 'JMS\TranslationBundle\Annotation\Ignore',
+          'desc' => 'JMS\TranslationBundle\Annotation\Desc',
+          'meaning' => 'JMS\TranslationBundle\Annotation\Meaning',
+          'ignore' => 'JMS\TranslationBundle\Annotation\Ignore',
         ));
         $docParser->setIgnoreNotImportedAnnotations(true);
 
